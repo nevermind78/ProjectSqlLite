@@ -4,6 +4,9 @@
 **Description du Projet:**
 L'objectif de ce projet est de créer une application web permettant aux utilisateurs d'explorer et d'exécuter des requêtes SQL sur des bases de données SQLite. L'application offrira une interface conviviale où les utilisateurs pourront sélectionner un fichier de base de données SQLite, visualiser les tables disponibles, afficher les détails des tables et soumettre des requêtes SQL pour obtenir des résultats instantanés.
 
+**Préliminaiore**
+* [lien vers le fichier Google Drive](https://drive.google.com/file/d/158QczWn-TwY6TlCo87qZr54FS2iq3376/view?usp=sharing)
+
 **Étapes du Projet:**
 
 1. **Installation des Prérequis:**

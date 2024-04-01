@@ -2,18 +2,12 @@ import streamlit as st
 import pandas as pd
 import sqlite3 
 import os
-
+# ecrire une fonction qui execute un code sql 
 def sql_executor(raw_code, conn):
-    c = conn.cursor()
-    c.execute(raw_code)
-    data = c.fetchall()
-    return data 
-
+    pass
+# Ecrire une fonction qui donne les noms des tables
 def get_table_names(conn):
-    c = conn.cursor()
-    c.execute("SELECT name FROM sqlite_master WHERE type='table';")
-    tables = c.fetchall()
-    return [table[0] for table in tables]
+    pass
 
 def Home():
     st.title("SQLlite with Streamlit and Python")
@@ -36,17 +30,15 @@ def Home():
             tables = get_table_names(conn)
             st.write("Tables:", tables)  # Debugging message
         st.subheader("Table Details")
-        if tables:
-            for table in tables:
-                with st.expander(f"{table}", expanded=False):
-                    c = conn.cursor()  # Define cursor here
-                    c.execute(f"PRAGMA table_info({table});")
-                    columns_info = c.fetchall()
-                    column_data = [[col[1], col[2]] for col in columns_info]
-                    column_df = pd.DataFrame(column_data, columns=["Column Name", "Column Type"])
-                    st.write(column_df,index=False)
-        else:
-            st.write("No tables found in the database.")
+        ## Afficher le nom des tables et les détails de chaque colonne pour chaque table 
+        def get_details():
+            pass
+
+
+
+
+
+        
         st.subheader("SQL Query")
         # Columns/Layout
         col1,col2 = st.columns(2)
@@ -63,12 +55,11 @@ def Home():
                 st.code(raw_code)
 
         # Results
-
+        # appliquer la requete avec pandas
         with st.expander("Result of the query"):
             try:
-                query_results = sql_executor(raw_code, conn) 
-                query_df = pd.DataFrame(query_results)
-                st.dataframe(query_df)
+
+                
             except:
                 st.error("Syntax error")
         

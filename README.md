@@ -9,7 +9,7 @@ L'objectif de ce projet est de créer une application web permettant aux utilisa
 
 ![Animated GIF](projectsql.gif)
 
-**Préliminaiore**
+**Préliminaire**
 * [lien vers le fichier Google Drive pour sqlite et python](https://drive.google.com/file/d/158QczWn-TwY6TlCo87qZr54FS2iq3376/view?usp=sharing)
 
 **Étapes du Projet:**
